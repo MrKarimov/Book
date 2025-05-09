@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #django rest apps 
     'rest_framework',
+    'drf_yasg',
     'books',
 ]
 
