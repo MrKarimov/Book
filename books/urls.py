@@ -1,5 +1,11 @@
 from django.urls import path
-from .views import BookListCreateApiView, BookDetailDeleteUpdateApiView, BookUpdateApiView, BookDeleteApiView,BookListApiView, BookCreateApiView
+from .views import (
+    BookListCreateApiView, 
+    BookDetailDeleteUpdateApiView,
+    BookUpdateApiView, 
+    BookDeleteApiView,BookListApiView, 
+    BookCreateApiView,
+    BookDetailApiView)
 
 urlpatterns = [
     path('books/',BookListCreateApiView.as_view()),
@@ -8,4 +14,6 @@ urlpatterns = [
     path('books/<int:pk>/delete/',BookDeleteApiView.as_view()),
     path('books/list/', BookListApiView.as_view()),
     path('books/created/', BookCreateApiView.as_view()),
+    path('books/detail/<int:pk>/', BookDetailApiView.as_view()),
+
 ]
